@@ -1,0 +1,41 @@
+'''
+#include <stdio.h>
+int main() {
+    int choice, numStudents;
+    float score, total = 0;
+    while (1) {
+        printf("\n1. Grade Calculator\n2. Multiplication Table (Loop Demo)\n3. Exit\nSelect an option: ");
+        scanf("%d", &choice);
+        if (choice == 3) break;
+        switch (choice) {
+            case 1:
+                printf("How many students? ");
+                scanf("%d", &numStudents);
+                for (int i = 1; i <= numStudents; i++) {
+                    printf("Enter score for student %d: ", i);
+                    scanf("%f", &score);
+                    if (score >= 90) printf("Grade: A\n");
+                    else if (score >= 75) printf("Grade: B\n");
+                    else if (score >= 40) printf("Grade: C\n");
+                    else printf("Grade: F (Fail)\n");  
+                    total += score;
+                }
+                printf("\nClass Average: %.2f\n", total / numStudents);
+                break;
+            case 2:
+                printf("Enter number for table: ");
+                int n;
+                scanf("%d", &n);
+                for (int i = 1; i <= 10; i++) {
+                    printf("%d x %d = %d\n", n, i, n * i);
+                }
+                break;
+            default:
+                printf("Invalid option. Try again.\n");
+        }
+    }
+
+    printf("Exiting program. Happy coding!\n");
+    return 0;
+}
+'''
