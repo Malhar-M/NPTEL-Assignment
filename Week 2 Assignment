@@ -1,0 +1,29 @@
+'''
+#include <stdio.h>
+int main() {
+    // Variables for different data types
+    float celsius, fahrenheit;
+    char userChar;
+    double radius, area;
+    const float PI = 3.14159;
+
+    // 1. Floating Point & Arithmetic
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &celsius);
+    fahrenheit = (celsius * 9 / 5) + 32;
+    printf("%.2f Celsius is equal to %.2f Fahrenheit\n\n", celsius, fahrenheit);
+
+    // 2. Character & Data Types
+    printf("Enter any character: ");
+    scanf(" %c", &userChar); 
+    printf("The ASCII value of '%c' is %d\n\n", userChar, userChar);
+
+    // 3. Circle Calculation (Operators)
+    printf("Enter the radius of a circle: ");
+    scanf("%lf", &radius);
+    area = PI * radius * radius;
+    printf("Area of the circle: %.4lf\n", area);
+
+    return 0;
+}
+'''
